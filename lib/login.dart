@@ -41,6 +41,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 120.0),
             // TODO: Remove filled: true values (103)
             // TODO: Add TextField widgets (101)
+            // TODO: Add button bar (101)
             TextField(
               decoration:
                   const InputDecoration(filled: true, labelText: 'Username'),
@@ -54,12 +55,19 @@ class _LoginPageState extends State<LoginPage> {
               obscureText: true,
             ),
             // TODO: Add button bar (101)
-            TextButton(
-                onPressed: () {
-                  print('CANCEL');
-                },
-                child: Text('CANCEL')),
-            ElevatedButton(onPressed: (() {}), child: Text('NEXT'))
+            OverflowBar(
+              alignment: MainAxisAlignment.end,
+              // TODO: Add a beveled rectangular border to CANCEL (103)
+              children: <Widget>[
+                // TODO: Add buttons (101)
+                TextButton(onPressed: () {}, child: Text('CANCEL')),
+                ElevatedButton(
+                    onPressed: (() {
+                      Navigator.of(context).pushNamed('/');
+                    }),
+                    child: Text('NEXT'))
+              ],
+            ),
           ],
         ),
       ),
