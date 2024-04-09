@@ -42,16 +42,16 @@ class _LoginPageState extends State<LoginPage> {
             // TODO: Remove filled: true values (103)
             // TODO: Add TextField widgets (101)
             // TODO: Add button bar (101)
-            TextField(
+            const TextField(
               decoration:
-                  const InputDecoration(filled: true, labelText: 'Username'),
+                  InputDecoration(filled: true, labelText: 'Username'),
             ),
             const SizedBox(
               height: 12,
             ),
-            TextField(
+            const TextField(
               decoration:
-                  const InputDecoration(filled: true, labelText: 'Password'),
+                  InputDecoration(filled: true, labelText: 'Password'),
               obscureText: true,
             ),
             // TODO: Add button bar (101)
@@ -60,12 +60,12 @@ class _LoginPageState extends State<LoginPage> {
               // TODO: Add a beveled rectangular border to CANCEL (103)
               children: <Widget>[
                 // TODO: Add buttons (101)
-                TextButton(onPressed: () {}, child: Text('CANCEL')),
+                TextButton(onPressed: () {}, child: const Text('CANCEL')),
                 ElevatedButton(
                     onPressed: (() {
                       Navigator.of(context).pushNamed('/');
                     }),
-                    child: Text('NEXT'))
+                    child: const Text('NEXT'))
               ],
             ),
           ],
